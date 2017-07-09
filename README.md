@@ -6,8 +6,9 @@ displayed into an html page where you can manage all the tabs.
 
 TODO
 ====
++ [x] very basic and rough version
 + [ ] open dashboard only once
-+ [ ] right-click option to only dashboard
++ [ ] right-click option to only dashboard page
 + [ ] button to remove a list
 + [ ] button to remove single item from list
 
