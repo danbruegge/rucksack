@@ -83,4 +83,4 @@ function onReloadStorageClick() {
 $ClearStorage.addEventListener('click', onClearStorageClick);
 $ReloadStorage.addEventListener('click', onReloadStorageClick);
 
-renderTabLists();
+document.addEventListener('DOMContentLoaded', renderTabLists);
