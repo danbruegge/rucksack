@@ -7,10 +7,13 @@ displayed into an html page where you can manage all the tabs.
 TODO
 ====
 + [x] very basic and rough version
++ [ ] put all storage related code into a `storage.js`
++ [ ] put `background.js` and `dashboard.js` into a block-scope
 + [ ] open dashboard only once
 + [ ] right-click option to only dashboard page
 + [ ] button to remove a list
 + [ ] button to remove single item from list
++ [ ] add eslint
 
 
 Third party
