@@ -55,12 +55,12 @@ function openTabs(event) {
             });
         });
 
-        TABS = [
+        const tabs = TABS = [
             ...TABS.slice(0, id),
             ...TABS.slice(id + 1)
         ];
 
-        browser.storage.local.set({ tabs: TABS }).then(() => renderTabLists());
+        browser.storage.local.set({ tabs }).then(() => renderTabLists());
     }
 }
 
