@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "web-ext run --bc -s ./src/"
+    "start": "web-ext -s ./src/ run --bc --url google.com --url danbruegge.com"
   },
   "author": "Daniel Brüggemann",
   "license": "MIT",
