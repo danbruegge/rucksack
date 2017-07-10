@@ -7,7 +7,7 @@ const $ReloadStorage = document.querySelector('#ReloadStorage');
 let TABS = [];
 
 function renderTabLists() {
-    browser.storage.local.get('tabs').then(storage=> {
+    browser.storage.local.get('tabs').then(storage => {
         if (!storage.hasOwnProperty('tabs')) {
             $TabListContainer.innerHTML = '';
             return false;
