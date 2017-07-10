@@ -1,5 +1,3 @@
-'use strict';
-
 const $TabListContainer = document.querySelector('#TabListContainer');
 const $ClearStorage = document.querySelector('#ClearStorage');
 const $ReloadStorage = document.querySelector('#ReloadStorage');

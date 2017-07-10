@@ -1,5 +1,3 @@
-'use strict';
-
 const PAGES = {
     dashboard: '/html/dashboard.html'
 };
