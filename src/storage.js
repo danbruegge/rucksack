@@ -6,6 +6,6 @@ export function setTabs(tabs) {
     return browser.storage.local.set({ tabs });
 }
 
-export function clearStorage(callback) {
-    return browser.storage.local.clear().then(callback);
+export function clearStorage() {
+    return browser.storage.local.clear();
 }
