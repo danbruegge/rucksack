@@ -1,3 +1,14 @@
 {
-    "presets": ["env"]
+    "presets": ["env", "react"],
+    "plugins": [
+        ["babel-plugin-module-resolver", {
+            "alias": {
+                "app": "./src"
+            }
+        }],
+        "transform-object-rest-spread",
+        "transform-export-extensions",
+        "transform-class-properties",
+        [ "transform-runtime", { "polyfill": false, "regenerator": true, }, ]
+    ]
 }
