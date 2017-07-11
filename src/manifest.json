@@ -5,6 +5,12 @@
 
     "description": "Convert your tabs into a compact list.",
 
+    "applications": {
+        "gecko": {
+            "id": "rucksack@example.com"
+        }
+    },
+
     "icons": {
         "32": "images/rucksack-32.png",
         "48": "images/rucksack-48.png"
