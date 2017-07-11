@@ -24,12 +24,11 @@ acorn@^5.0.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.1.tgz#53fe161111f912ab999ee887a90a0bc52822fd75"
 
-addons-linter@0.22.2:
-  version "0.22.2"
-  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-0.22.2.tgz#2a74eb7ca88f4c87657b779e76a08d2a97117324"
+addons-linter@0.22.3:
+  version "0.22.3"
+  resolved "https://registry.yarnpkg.com/addons-linter/-/addons-linter-0.22.3.tgz#c954a32c569afd68281c37acb263c65374c6f5ad"
   dependencies:
     ajv "5.2.0"
-    babel-polyfill "6.23.0"
     chalk "1.1.3"
     cheerio "0.22.0"
     columnify "1.5.4"
@@ -98,13 +97,15 @@ ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
+ansi-styles@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.1.0.tgz#09c202d5c917ec23188caa5c9cb9179cd9547750"
+  dependencies:
+    color-convert "^1.0.0"
+
 any-promise@^1.0.0, any-promise@^1.1.0, any-promise@~1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
-
-any-promise@~0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-0.1.0.tgz#830b680aa7e56f33451d4b049f3bd8044498ee27"
 
 anymatch@^1.3.0:
   version "1.3.0"
@@ -267,15 +268,7 @@ babel-polyfill@6.20.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-polyfill@6.23.0:
-  version "6.23.0"
-  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.23.0.tgz#8364ca62df8eafb830499f699177466c3b03499d"
-  dependencies:
-    babel-runtime "^6.22.0"
-    core-js "^2.4.0"
-    regenerator-runtime "^0.10.0"
-
-babel-runtime@6.23.0, babel-runtime@^6.20.0, babel-runtime@^6.22.0, babel-runtime@^6.9.1:
+babel-runtime@6.23.0, babel-runtime@^6.20.0, babel-runtime@^6.9.1:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.23.0.tgz#0a9489f144de70efb3ce4300accdb329e2fc543b"
   dependencies:
@@ -410,6 +403,14 @@ chalk@1.1.3, chalk@^1.0.0, chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
+chalk@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.0.1.tgz#dbec49436d2ae15f536114e76d14656cdbc0f44d"
+  dependencies:
+    ansi-styles "^3.1.0"
+    escape-string-regexp "^1.0.5"
+    supports-color "^4.0.0"
+
 cheerio@0.22.0:
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.22.0.tgz#a9baa860a3f9b595a6b81b1a86873121ed3a269e"
@@ -483,6 +484,16 @@ co@^4.6.0:
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
+
+color-convert@^1.0.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.0.tgz#1accf97dd739b983bf994d56fec8f95853641b7a"
+  dependencies:
+    color-name "^1.1.1"
+
+color-name@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.2.tgz#5c8ab72b64bd2215d617ae9559ebb148475cf98d"
 
 colors@0.5.x:
   version "0.5.1"
@@ -786,8 +797,8 @@ error-ex@^1.2.0:
     is-arrayish "^0.2.1"
 
 es5-ext@^0.10.14, es5-ext@^0.10.9, es5-ext@~0.10.14:
-  version "0.10.23"
-  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.23.tgz#7578b51be974207a5487821b56538c224e4e7b38"
+  version "0.10.24"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.24.tgz#a55877c9924bc0c8d9bd3c2cbe17495ac1709b14"
   dependencies:
     es6-iterator "2"
     es6-symbol "~3.1"
@@ -1152,12 +1163,6 @@ fs-extra@~2.1.2:
     graceful-fs "^4.1.2"
     jsonfile "^2.1.0"
 
-fs-promise@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/fs-promise/-/fs-promise-0.3.1.tgz#bf34050368f24d6dc9dfc6688ab5cead8f86842a"
-  dependencies:
-    any-promise "~0.1.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -1186,12 +1191,11 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-fx-runner@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/fx-runner/-/fx-runner-1.0.6.tgz#38839b5d60b34578fa062a4c164c81df23ea1220"
+fx-runner@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/fx-runner/-/fx-runner-1.0.7.tgz#c102cfdf21234c2dbd16723dccb1186f99c0b641"
   dependencies:
     commander "2.9.0"
-    fs-promise "0.3.1"
     lodash "3.10.1"
     shell-quote "1.6.1"
     spawn-sync "1.0.15"
@@ -1357,6 +1361,10 @@ has-ansi@^2.0.0:
 has-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
+
+has-flag@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
 
 has-unicode@^2.0.0:
   version "2.0.1"
@@ -2262,10 +2270,10 @@ pinkie@^2.0.0:
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
 pino@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-4.6.0.tgz#68e78ee9f3799a208a120a4533207943f38f6c5d"
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-4.7.0.tgz#8d818313d1095dbb6ada09df2a10bce214dae9d1"
   dependencies:
-    chalk "^1.1.1"
+    chalk "^2.0.1"
     fast-json-parse "^1.0.0"
     fast-safe-stringify "^1.1.11"
     flatstr "^1.0.4"
@@ -2819,6 +2827,12 @@ supports-color@^3.2.3:
   dependencies:
     has-flag "^1.0.0"
 
+supports-color@^4.0.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.2.0.tgz#ad986dc7eb2315d009b4d77c8169c2231a684037"
+  dependencies:
+    has-flag "^2.0.0"
+
 table@^3.7.8:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/table/-/table-3.8.3.tgz#2bbc542f0fda9861a755d3947fefd8b3f513855f"
@@ -3030,10 +3044,10 @@ wcwidth@^1.0.0:
     defaults "^1.0.3"
 
 web-ext@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/web-ext/-/web-ext-1.10.0.tgz#b377834bfbd41b82c78e08ca81f70dbae0e2650b"
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/web-ext/-/web-ext-1.10.1.tgz#c2d442deffefba15a89d24c9f28526b16740f469"
   dependencies:
-    addons-linter "0.22.2"
+    addons-linter "0.22.3"
     babel-polyfill "6.20.0"
     babel-runtime "6.23.0"
     bunyan "1.8.10"
@@ -3044,7 +3058,7 @@ web-ext@^1.10.0:
     es6-promisify "5.0.0"
     event-to-promise "0.8.0"
     firefox-profile "0.5.0"
-    fx-runner "1.0.6"
+    fx-runner "1.0.7"
     git-rev-sync "1.9.1"
     minimatch "3.0.4"
     mkdirp "0.5.1"
