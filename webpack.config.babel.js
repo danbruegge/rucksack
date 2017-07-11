@@ -20,6 +20,15 @@ export default (env) => {
         module: {
             rules: [
                 {
+                    enforce: 'pre',
+                    test: /\.(js|jsx)$/,
+                    exclude,
+                    loader: 'eslint-loader',
+                    options: {
+                        fix: true,
+                    },
+                },
+                {
                     exclude,
                     test: /\.(js|jsx)$/,
                     use: 'babel-loader',
