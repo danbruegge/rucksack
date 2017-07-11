@@ -23,8 +23,7 @@
 
     "background": {
         "scripts": [
-            "js/storage.js",
-            "js/background.js"
+            "dist/background.js"
         ]
     },
 

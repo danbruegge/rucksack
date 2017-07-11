@@ -1,0 +1,38 @@
+import path from 'path';
+import webpack from 'webpack';
+
+export default (env) => {
+    const publicPath = resolvePath('extension/');
+    const exclude = /(node_modules|extension|__tests__)/;
+
+    return {
+        resolve: { extensions: ['.js', '.jsx'] },
+        context: resolvePath('src'),
+        entry: {
+            background: './background.js',
+            dashboard: './dashboard.js',
+        },
+        output: {
+            filename: './dist/[name].js',
+            path: publicPath,
+            publicPath: '/',
+        },
+        module: {
+            rules: [
+                {
+                    exclude,
+                    test: /\.(js|jsx)$/,
+                    use: 'babel-loader',
+                },
+            ],
+        },
+        plugins: [
+            new webpack.optimize.ModuleConcatenationPlugin(),
+        ],
+        devtool: 'sourcemap',
+    };
+
+    function resolvePath(toResolve) {
+        return path.resolve(__dirname, toResolve);
+    }
+};

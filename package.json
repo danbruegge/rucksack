@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "web-ext -s ./src/ run --bc --url google.com --url danbruegge.com",
-    "lint": "web-ext -s ./src/ lint"
+    "web": "web-ext -s ./extension/ run --bc --url google.com --url danbruegge.com",
+    "dev": "webpack --env.development --watch",
+    "lint": "web-ext -s ./extension/ lint"
   },
   "author": "Daniel Brüggemann",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
-    "web-ext": "^1.10.0"
+    "web-ext": "^1.10.0",
+    "webpack": "^3.1.0"
   }
 }
