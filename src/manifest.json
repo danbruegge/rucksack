@@ -22,7 +22,10 @@
     ],
 
     "background": {
-        "scripts": ["js/background.js"]
+        "scripts": [
+            "js/storage.js",
+            "js/background.js"
+        ]
     },
 
     "browser_action": {

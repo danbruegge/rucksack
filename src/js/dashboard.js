@@ -6,7 +6,7 @@
     let TABS = [];
 
     function renderTabLists() {
-        browser.storage.local.get('tabs').then(storage => {
+        getTabs().then(storage => {
             if (!storage.hasOwnProperty('tabs')) {
                 $TabListContainer.innerHTML = '';
                 return false;
@@ -59,7 +59,7 @@
                 ...TABS.slice(id + 1)
             ];
 
-            browser.storage.local.set({ tabs }).then(() => renderTabLists());
+            setTabs(TABS).then(() => renderTabLists());
         }
     }
 
@@ -72,7 +72,7 @@
     }
 
     function onClearStorageClick() {
-        browser.storage.local.clear().then(() => renderTabLists());
+        clearStorage(renderTabLists);
     }
 
     function onReloadStorageClick() {

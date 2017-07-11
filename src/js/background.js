@@ -32,14 +32,14 @@
     }
 
     function saveTabsToLocalStorage(tabsToSave) {
-        browser.storage.local.get('tabs').then(storage => {
+        getTabs().then(storage => {
             let tabs = [ tabsToSave ];
 
             if (storage.hasOwnProperty('tabs')) {
                 tabs = [ ...storage.tabs, ...tabs ]
             }
 
-            browser.storage.local.set({ tabs });
+            setTabs(tabs);
         });
     }
 
