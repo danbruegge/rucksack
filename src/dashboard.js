@@ -7,8 +7,8 @@ const $ReloadStorage = document.querySelector('#ReloadStorage');
 let TABS = [];
 
 function renderTabLists() {
-    getTabs().then(storage => {
-        if (!storage.hasOwnProperty('tabs')) {
+    getTabs().then((storage) => {
+        if (!Object.prototype.hasOwnProperty.call(storage, 'tabs')) {
             $TabListContainer.innerHTML = '';
             return false;
         }
@@ -17,21 +17,23 @@ function renderTabLists() {
 
         TABS = storage.tabs;
 
-        TABS.map((list, index) => {
-            lists = [ ...lists, renderTabList(list, index) ];
-        });
+        TABS.map((list, index) => (
+            lists = [...lists, renderTabList(list, index)]
+        ));
 
         $TabListContainer.innerHTML = lists.join('');
         $TabListContainer.addEventListener('click', openTabs);
+
+        return true;
     });
 }
 
 function renderTabList(list, id) {
     let items = [];
 
-    list.map(item => {
-        items = [ ...items, renderTabListItem(item.url, item.title) ];
-    });
+    list.map(item => (
+        items = [...items, renderTabListItem(item.url, item.title)]
+    ));
 
     return `
         <div>
@@ -48,16 +50,16 @@ function openTabs(event) {
         const id = +event.target.dataset.id;
         const tabsToOpen = TABS[id];
 
-        tabsToOpen.map(tab => {
+        tabsToOpen.map(tab => (
             browser.tabs.create({
                 active: false,
-                url: tab.url
-            });
-        });
+                url: tab.url,
+            })
+        ));
 
-        const tabs = TABS = [
+        TABS = [
             ...TABS.slice(0, id),
-            ...TABS.slice(id + 1)
+            ...TABS.slice(id + 1),
         ];
 
         setTabs(TABS).then(() => renderTabLists());

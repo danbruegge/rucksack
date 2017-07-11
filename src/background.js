@@ -1,7 +1,7 @@
 import { getTabs, setTabs } from './storage';
 
 const PAGES = {
-    dashboard: '../dashboard.html'
+    dashboard: '../dashboard.html',
 };
 
 function onClicked() {
@@ -13,7 +13,7 @@ function collectAllNotPinnedTabs() {
     browser
         .tabs
         .query({ currentWindow: true })
-        .then(items => {
+        .then((items) => {
             const noPinnedTabs = items.filter(noPinnedTab);
             saveTabsToLocalStorage(noPinnedTabs);
 
@@ -23,7 +23,7 @@ function collectAllNotPinnedTabs() {
 
 function openPage(pageName) {
     browser.tabs.create({
-        url: PAGES[pageName]
+        url: PAGES[pageName],
     });
 }
 
@@ -33,11 +33,11 @@ function noPinnedTab(item) {
 }
 
 function saveTabsToLocalStorage(tabsToSave) {
-    getTabs().then(storage => {
-        let tabs = [ tabsToSave ];
+    getTabs().then((storage) => {
+        let tabs = [tabsToSave];
 
-        if (storage.hasOwnProperty('tabs')) {
-            tabs = [ ...storage.tabs, ...tabs ]
+        if (Object.prototype.hasOwnProperty.call(storage, 'tabs')) {
+            tabs = [...storage.tabs, ...tabs];
         }
 
         setTabs(tabs);
