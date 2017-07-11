@@ -7,13 +7,17 @@ displayed into an html page where you can manage all the tabs.
 TODO
 ====
 + [x] very basic and rough version
-+ [ ] put all storage related code into a `storage.js`
-+ [ ] put `background.js` and `dashboard.js` into a block-scope
++ [x] put all storage related code into a `storage.js`
++ [x] put `background.js` and `dashboard.js` into a block-scope
 + [ ] open dashboard only once
 + [ ] right-click option to only dashboard page
 + [ ] button to remove a list
 + [ ] button to remove single item from list
-+ [ ] add eslint
++ [x] add weback && babel
++ [x] add eslint
++ [x] add react for ui
++ [ ] refactor react components
++ [ ] check how to fix the errors from `web-ext lint` 
 
 
 Third party
