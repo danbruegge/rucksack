@@ -11,6 +11,8 @@
   "author": "Daniel Brüggemann",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0",
     "web-ext": "^1.10.0"
   }
 }
