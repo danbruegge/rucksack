@@ -16,7 +16,7 @@ TODO
 + [x] add weback && babel
 + [x] add eslint
 + [x] add react for ui
-+ [ ] refactor react components
++ [x] refactor react components
 + [ ] check how to fix the errors from `web-ext lint` 
 + [ ] use styled components for styling
 
