@@ -19,13 +19,17 @@ class TabLists extends Component {
     render() {
         return (
             <div>
-                {this.state.tabs.map((list, index) => (
-                    <TabList
-                        listId={index}
-                        tabs={this.state.tabs[index]}
-                        onClick={() => this.onOpenList(index)}
-                    />
-                ))}
+                {this.state.tabs.map((list, index) => {
+                    const id = index;
+                    return (
+                        <TabList
+                            key={id}
+                            listId={id}
+                            tabs={list}
+                            onClick={() => this.onOpenList(id)}
+                        />
+                    );
+                })}
             </div>
         );
     }

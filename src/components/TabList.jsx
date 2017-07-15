@@ -6,7 +6,9 @@ import { TabListItem } from 'app/components';
 const TabList = ({ listId, tabs, onClick }) => (
     <div>
         <ul>
-            {tabs.map(props => <TabListItem {...props} />)}
+            {tabs.map(itemProps => (
+                <TabListItem key={itemProps.id} {...itemProps} />
+            ))}
         </ul>
         <button onClick={onClick}>
             Open list #{listId}
