@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { getTabs, setTabs } from 'app/storage';
+import { TabList } from 'app/components';
 
 class TabLists extends Component {
     state = {
@@ -19,25 +20,12 @@ class TabLists extends Component {
         return (
             <div>
                 {this.state.tabs.map((list, index) => (
-                    this.renderTabList(index)),
-                )}
-            </div>
-        );
-    }
-
-    renderTabList(id) {
-        return (
-            <div>
-                <ul>
-                    {this.state.tabs[id].map(({ url, title }) => (
-                        <li>
-                            <a href={url}>{title}</a>
-                        </li>
-                    ))}
-                </ul>
-                <button onClick={() => this.onOpenList(id)}>
-                    Open list #{id}
-                </button>
+                    <TabList
+                        listId={index}
+                        tabs={this.state.tabs[index]}
+                        onClick={() => this.onOpenList(index)}
+                    />
+                ))}
             </div>
         );
     }
