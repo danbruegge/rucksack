@@ -18,6 +18,7 @@ TODO
 + [x] add react for ui
 + [ ] refactor react components
 + [ ] check how to fix the errors from `web-ext lint` 
++ [ ] use styled components for styling
 
 
 Third party
