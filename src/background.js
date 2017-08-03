@@ -53,8 +53,15 @@ function getTabListWithUid(tabList) {
     const listId = shortid.generate();
 
     return {
-        [listId]: tabList,
+        [listId]: setUidForSingleTab(tabList),
     };
+}
+
+function setUidForSingleTab(tabList) {
+    return tabList.map(tab => ({
+        ...tab,
+        uid: shortid.generate(),
+    }));
 }
 
 browser.browserAction.onClicked.addListener(onClicked);

@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TabListItem = ({ url, title }) => (
+const TabListItem = ({ uid, url, title }) => (
     <li>
-        <a href={url}>{title}</a>
+        <b>{uid}</b> - <a href={url}>{title}</a>
     </li>
 );
 
 TabListItem.propTypes = {
+    uid: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
 };

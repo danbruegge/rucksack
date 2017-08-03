@@ -7,7 +7,7 @@ const TabList = ({ listId, tabs, onClick }) => (
     <div>
         <ul>
             {tabs.map(itemProps => (
-                <TabListItem key={itemProps.id} {...itemProps} />
+                <TabListItem key={itemProps.uid} {...itemProps} />
             ))}
         </ul>
         <button onClick={onClick}>
