@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
-import ducks from 'app/ducks';
+import * as reducers from 'app/ducks';
 import { TabLists } from 'app/components';
 
-const store = createStore(ducks);
+const rootReducer = combineReducers(reducers);
+const store = createStore(rootReducer);
 
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(
