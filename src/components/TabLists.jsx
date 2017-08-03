@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { getTabs, setTabs } from 'app/storage';
+import { getTabs, setTabs } from 'app/utils/storage';
 import { TabList } from 'app/components';
 
 class TabLists extends Component {
