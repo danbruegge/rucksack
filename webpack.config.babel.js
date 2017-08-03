@@ -37,6 +37,13 @@ export default (env) => {
         },
         plugins: [
             new webpack.optimize.ModuleConcatenationPlugin(),
+            new webpack.DefinePlugin({
+                'process.env': {
+                    NODE_ENV: JSON.stringify(
+                        env.development ? 'development' : 'production',
+                    ),
+                },
+            }),
         ],
         devtool: 'sourcemap',
     };
