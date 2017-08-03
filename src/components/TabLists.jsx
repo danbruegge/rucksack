@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { getTabs, setTabs } from 'app/storage';
 import { TabList } from 'app/components';
@@ -59,4 +60,7 @@ class TabLists extends Component {
     }
 }
 
-export default TabLists;
+const mapStateToProps = ({ addTab }) => ({
+    addTab,
+});
+export default connect(mapStateToProps)(TabLists);
