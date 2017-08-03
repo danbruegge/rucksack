@@ -1,3 +1,5 @@
+import shortid from 'shortid';
+
 import { getTabs, setTabs } from './storage';
 
 const PAGES = {
@@ -34,14 +36,25 @@ function noPinnedTab(item) {
 
 function saveTabsToLocalStorage(tabsToSave) {
     getTabs().then((storage) => {
-        let tabs = [tabsToSave];
+        let tabs = getTabListWithUid(tabsToSave);
 
         if (Object.prototype.hasOwnProperty.call(storage, 'tabs')) {
-            tabs = [...storage.tabs, ...tabs];
+            tabs = {
+                ...storage.tabs,
+                ...tabs,
+            };
         }
 
         setTabs(tabs);
     });
+}
+
+function getTabListWithUid(tabList) {
+    const listId = shortid.generate();
+
+    return {
+        [listId]: tabList,
+    };
 }
 
 browser.browserAction.onClicked.addListener(onClicked);

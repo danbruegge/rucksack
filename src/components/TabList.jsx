@@ -17,7 +17,7 @@ const TabList = ({ listId, tabs, onClick }) => (
 );
 
 TabList.propTypes = {
-    listId: PropTypes.number.isRequired,
+    listId: PropTypes.string.isRequired,
     tabs: PropTypes.arrayOf(PropTypes.shape({
         url: PropTypes.string,
         title: PropTypes.string,

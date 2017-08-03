@@ -20,13 +20,15 @@ class TabLists extends Component {
     render() {
         return (
             <div>
-                {this.state.tabs.map((list, index) => {
-                    const id = index;
+                {Object.entries(this.state.tabs).map((list) => {
+                    const id = list[0];
+                    const tabs = list[1];
+
                     return (
                         <TabList
                             key={id}
                             listId={id}
-                            tabs={list}
+                            tabs={tabs}
                             onClick={() => this.onOpenList(id)}
                         />
                     );
@@ -46,16 +48,13 @@ class TabLists extends Component {
         ));
 
         this.setState((prevState) => {
-            const nextState = {
-                tabs: [
-                    ...prevState.tabs.slice(0, id),
-                    ...prevState.tabs.slice(id + 1),
-                ],
+            const { [id]: removedTabs, ...remainingTabs } = prevState.tabs;
+
+            setTabs(remainingTabs);
+
+            return {
+                tabs: remainingTabs,
             };
-
-            setTabs(nextState.tabs);
-
-            return nextState;
         });
     }
 }
