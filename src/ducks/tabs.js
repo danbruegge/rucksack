@@ -1,4 +1,4 @@
-const ADD_TAB = 'rucksack/tabs/ADD_TAB';
+export const ADD_TAB = 'rucksack/tabs/ADD_TAB';
 
 export default (state = {}, action) => {
     switch (action.type) {
