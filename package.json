@@ -4,13 +4,17 @@
   "description": "Convert your tabs into a compact list.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "tdd": "npm test -- --watch",
     "web": "web-ext -s ./extension/ run --bc --url google.com --url danbruegge.com",
     "dev": "webpack --env.development --watch",
     "lint": "web-ext -s ./extension/ lint"
   },
   "author": "Daniel Brüggemann",
   "license": "MIT",
+  "jest": {
+    "collectCoverage": true
+  },
   "dependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -22,12 +26,14 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "deep-freeze": "^0.0.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
