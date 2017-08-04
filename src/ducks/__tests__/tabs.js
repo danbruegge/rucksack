@@ -24,17 +24,12 @@ describe('Actions', () => {
 });
 
 describe('Reducer', () => {
-    it('should provide the initial state with empty action', () => {
+    it('should provide the initial state', () => {
         const actual = reducer(undefined, {});
         expect(actual).toEqual({});
     });
 
-    it('should provide the initial state with unknown type', () => {
-        const actual = reducer(undefined, { type: 'unknown' });
-        expect(actual).toEqual({});
-    });
-
-    it('should provide add an tab', () => {
+    it('should handle ADD_TAB', () => {
         const state = deepFreeze({});
         const actual = reducer(state, ACTION);
 
