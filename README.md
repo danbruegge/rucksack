@@ -8,4 +8,4 @@ Third party
 ===========
 Icon made by [Freepik](http://www.freepik.com/) from www.flaticon.com 
 
-+ http://www.flaticon.com/free-icon/backpack_145735
++ https://www.flaticon.com/free-icon/backpack_145647

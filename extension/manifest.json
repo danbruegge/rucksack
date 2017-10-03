@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
     "name": "Rucksack",
-    "version": "0.1",
+    "version": "0.0.1",
 
-    "description": "Convert your tabs into a compact list.",
+    "description": "Convert your open tabs into a compact list.",
 
     "applications": {
         "gecko": {
@@ -28,7 +28,10 @@
     },
 
     "browser_action": {
-        "default_icon": "images/rucksack-32.png",
-        "default_title": "Rucksack"
+        "default_title": "Rucksack",
+        "default_icon": {
+            "32": "images/rucksack-32.png",
+            "48": "images/rucksack-48.png"
+        }
     }
 }

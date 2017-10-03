@@ -1,8 +1,11 @@
 {
   "name": "rucksack",
   "version": "0.0.1",
-  "description": "Convert your tabs into a compact list.",
+  "description": "Convert your open tabs into a compact list.",
   "main": "index.js",
+  "repository": "git@github.com:danbruegge/rucksack.git",
+  "author": "Daniel Brüggemann",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "tdd": "npm test -- --watch",
@@ -10,14 +13,15 @@
     "dev": "webpack --env.development --watch",
     "lint": "web-ext -s ./extension/ lint"
   },
-  "author": "Daniel Brüggemann",
-  "license": "MIT",
+  "browserslist": [
+    "last 1 versions"
+  ],
   "jest": {
     "collectCoverage": true
   },
   "dependencies": {
     "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.1",
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -27,19 +31,20 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "deep-freeze": "^0.0.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.8.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "jest": "^20.0.4",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "jest": "^21.2.1",
+    "nanoid": "^0.2.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.5",
+    "react-test-renderer": "^16.0.0",
     "redux": "^3.7.2",
-    "shortid": "^2.2.8",
-    "web-ext": "^1.10.0",
+    "web-ext": "^2.0.0",
     "webpack": "^3.1.0"
   }
 }

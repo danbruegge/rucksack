@@ -6,6 +6,7 @@ export default (env) => {
     const exclude = /(node_modules|extension|__tests__)/;
 
     return {
+        devtool: 'sourcemap',
         resolve: { extensions: ['.js', '.jsx'] },
         context: resolvePath('src'),
         entry: {
@@ -36,7 +37,6 @@ export default (env) => {
             ],
         },
         plugins: [
-            new webpack.optimize.ModuleConcatenationPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
                     NODE_ENV: JSON.stringify(
@@ -44,8 +44,8 @@ export default (env) => {
                     ),
                 },
             }),
+            new webpack.optimize.ModuleConcatenationPlugin(),
         ],
-        devtool: 'sourcemap',
     };
 
     function resolvePath(toResolve) {
