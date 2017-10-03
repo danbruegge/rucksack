@@ -1,7 +1,7 @@
+import { openPage } from 'app/utils';
+
 browser.browserAction.onClicked.addListener(onClicked);
 
 function onClicked() {
-    browser.tabs.create({
-        url: '../dashboard.html',
-    });
+    openPage('dashboard');
 }
