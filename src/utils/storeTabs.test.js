@@ -12,7 +12,9 @@ describe('Storage', () => {
         global.browser = {
             storage: {
                 local: {
-                    get: jest.fn(async () => ({})),
+                    get: jest.fn(async () => ({
+                        tabs: { 'tabList-id': [] },
+                    })),
                     set: jest.fn(async () => null),
                 },
             },
@@ -33,6 +35,7 @@ describe('Storage', () => {
         expect(setCalls.length).toBe(1);
         expect(setCalls[0][0]).toEqual({
             tabs: {
+                'tabList-id': [],
                 'tabList-generated-id': [
                     {
                         id: 1,
@@ -50,7 +53,9 @@ describe('Storage', () => {
 
         expect(calls.length).toBe(1);
         expect(calls[0][0]).toBe('tabs');
-        expect(actual).toEqual({});
+        expect(actual).toEqual({
+            tabs: { 'tabList-id': [] },
+        });
     });
 
     test('setTab() should call browser.storage.local.set', async () => {
@@ -60,7 +65,7 @@ describe('Storage', () => {
 
         expect(calls.length).toBe(1);
         expect(calls[0][0]).toEqual({ tabs: {} });
-        expect(actual).toBe(null);
+        expect(actual).toEqual(null);
     });
 
     test('addUidToTab should return tab with uid property', () => {
