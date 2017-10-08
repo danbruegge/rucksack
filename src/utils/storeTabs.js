@@ -1,5 +1,7 @@
 import nanoid from 'nanoid';
 
+import generateId from './generateId';
+
 export default async function (tabsToSave) {
     const storage = await getTabs();
     const hasTabs = Object.prototype.hasOwnProperty.call(storage, 'tabs');
@@ -24,8 +26,4 @@ export function addUidToTab(tab) {
         ...tab,
         uid: generateId('tabItem'),
     };
-}
-
-export function generateId(prefix = '') {
-    return `${prefix && `${prefix}-`}${nanoid()}`;
 }

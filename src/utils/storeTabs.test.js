@@ -1,9 +1,4 @@
-import storeTabs, {
-    getTabs,
-    setTabs,
-    addUidToTab,
-    generateId,
-} from './storeTabs';
+import storeTabs, { getTabs, setTabs, addUidToTab } from './storeTabs';
 
 jest.mock('nanoid');
 
@@ -77,22 +72,6 @@ describe('Storage', () => {
             id: 1,
             uid: 'tabItem-generated-id',
         };
-
-        expect(actual).toEqual(expected);
-    });
-
-    test('generateId should return the right id', () => {
-        const actual = generateId();
-
-        const expected = 'generated-id';
-
-        expect(actual).toEqual(expected);
-    });
-
-    test('generateId should return the right id with prefix', () => {
-        const actual = generateId('item');
-
-        const expected = 'item-generated-id';
 
         expect(actual).toEqual(expected);
     });
